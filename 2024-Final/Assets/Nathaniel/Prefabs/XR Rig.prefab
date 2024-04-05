@@ -44,7 +44,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6308012939607489077}
   - component: {fileID: 7789864506729615804}
-  - component: {fileID: 4456332702194950241}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -313,20 +312,6 @@ MonoBehaviour:
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &4456332702194950241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941789088079372021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3fdea841a1e5649b0c66189e3af9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hapticAmplitude: 0.2
-  hapticDuration: 0.2
 --- !u!1 &2299288947486358842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1796,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4935540035630197669}
   - component: {fileID: 4940927752619648333}
-  - component: {fileID: 7757549847403524619}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -2080,20 +2064,6 @@ MonoBehaviour:
     m_Reference: {fileID: -1636515391019944688, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &7757549847403524619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7339961998524581127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3fdea841a1e5649b0c66189e3af9fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hapticAmplitude: 1
-  hapticDuration: 0.2
 --- !u!1 &7401661033802942259
 GameObject:
   m_ObjectHideFlags: 0
