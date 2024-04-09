@@ -1,29 +1,9 @@
 fileFormatVersion: 2
-guid: fabd91b265981f24aa843028fbefd2f3
+guid: 832ad6e09979beb4599f7e601d4614fc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OrganSystem
-    second: {fileID: 2100000, guid: 3e0ffa38c3f8203419f57a2311a32eb6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: bladder
-    second: {fileID: 2100000, guid: 945e08d0f0fbe9242ab5b3aeafd0abc9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pipe system
-    second: {fileID: 2100000, guid: 947452c68f6ff064592f2553d7deabab, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pipes
-    second: {fileID: 2100000, guid: 45540116d9b57e346b52e4d9ba1d36e6, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
