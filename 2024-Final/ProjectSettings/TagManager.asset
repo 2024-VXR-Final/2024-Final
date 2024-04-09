@@ -8,6 +8,8 @@ TagManager:
   - Cube
   - Food
   - Ray
+  - Spawn
+  - Destroy
   layers:
   - Default
   - TransparentFX
