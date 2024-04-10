@@ -30,7 +30,6 @@ public class SpinObject : MonoBehaviour
         if (rigidBody.angularVelocity.y <= 5)
         {
             rigidBody.AddTorque(Vector3.up * speed);
-
         }
     }
 }
