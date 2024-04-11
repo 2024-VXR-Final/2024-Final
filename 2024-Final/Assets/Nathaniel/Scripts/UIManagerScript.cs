@@ -14,22 +14,34 @@ public class UIManagerScript : MonoBehaviour
 {
     SpinObject spinScript;
     ToolTip toolTipScript;
+    ControllerData controllerData;
+    GameManagerScript gameManager;
+    bool triggerChecking;
+
+    private void Start()
+    {
+        gameManager = GetComponentInParent<GameManagerScript>();
+    }
 
     //Reference this in the onhover event on each controller
     public void HoverEvent(HoverEnterEventArgs args)
     {
+        controllerData = args.interactorObject.transform.gameObject.GetComponentInParent<ControllerData>();
+
         if (args.interactableObject.transform.gameObject.TryGetComponent<SpinObject>(out spinScript))
         {
             spinScript.SpinThing();
-        } else if (args.interactableObject.transform.gameObject.TryGetComponent<ToolTip>(out toolTipScript))
+            StartCoroutine(TriggerCheck());
+            triggerChecking = true;
+        }
+        else if (args.interactableObject.transform.gameObject.TryGetComponent<ToolTip>(out toolTipScript))
         {
-            toolTipScript.ShowTip();    
+            toolTipScript.ShowTip();
         }
         else
         {
             Debug.Log("Thing not found");
         }
-
     }
 
     public void OnHoverExit(HoverExitEventArgs args)
@@ -38,6 +50,24 @@ public class UIManagerScript : MonoBehaviour
         {
             toolTipScript.HideTip();
         }
+        if (triggerChecking)
+        {
+            StopCoroutine(TriggerCheck());
+            triggerChecking = false;
+        }
+
     }
 
+    IEnumerator TriggerCheck()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (controllerData.triggered && triggerChecking)
+            {
+                gameManager.DifficultySelect(spinScript.tag);
+                triggerChecking = false;
+            }
+        }
+    }
 }

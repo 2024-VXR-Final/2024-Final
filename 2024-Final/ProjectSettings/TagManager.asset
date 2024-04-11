@@ -10,6 +10,9 @@ TagManager:
   - Ray
   - Spawn
   - Destroy
+  - Easy
+  - Medium
+  - Hard
   layers:
   - Default
   - TransparentFX
