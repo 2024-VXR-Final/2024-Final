@@ -68,7 +68,19 @@ Material:
         m_Texture: {fileID: 2800000, guid: 3cd0b83a033ea7d429869ab09e9f831a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ScrollingElectricWaveTexture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_1400ee7524524c6cb1bbea6bb6686058_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3cd0b83a033ea7d429869ab09e9f831a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ripple:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
