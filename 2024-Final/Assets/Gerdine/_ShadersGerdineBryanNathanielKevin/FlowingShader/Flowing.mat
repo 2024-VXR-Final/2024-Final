@@ -38,7 +38,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ScrollingElectricWaveTexture:
+        m_Texture: {fileID: 2800000, guid: 768376c4e36455c4db61d47e1c655caa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ScrollingElectricWaveTexture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_1400ee7524524c6cb1bbea6bb6686058_Out_0_Texture2D:
         m_Texture: {fileID: 2800000, guid: 3cd0b83a033ea7d429869ab09e9f831a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ripple:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -58,8 +70,8 @@ Material:
     - _NoiseScale: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ScrollingSpeed: 0.5
+    - _ScrollingSpeed: 0.02
     - _SurfaceMovementSpeed: 0.1
     m_Colors:
-    - _TextureColor: {r: 0.9433962, g: 0.07564971, b: 0.07564971, a: 0}
+    - _TextureColor: {r: 170.77295, g: 7.249792, b: 7.249792, a: 0}
   m_BuildTextureStacks: []

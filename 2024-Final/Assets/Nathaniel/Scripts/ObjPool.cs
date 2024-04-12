@@ -10,10 +10,12 @@ public class ObjPool : MonoBehaviour
     Transform destroyPoint;
     Vector3 spawnOffset = new Vector3(0, 0.1f, 0);
     [SerializeField] PooledObject objToSpawn;
+    [SerializeField] int maxPoolSize = 5;
     public IObjectPool<PooledObject> pool;
 
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //Get spawn and destroy locations
         var transforms = GetComponentsInChildren<Transform>();
@@ -29,7 +31,7 @@ public class ObjPool : MonoBehaviour
             }
         }
 
-        pool = new ObjectPool<PooledObject>(CreateObj, OnGet, OnRelease, OnDestroyObj, maxSize: 5);
+        pool = new ObjectPool<PooledObject>(CreateObj, OnGet, OnRelease, OnDestroyObj, maxSize: maxPoolSize);
         StartCoroutine(SpawnOnTimer());
     }
 
