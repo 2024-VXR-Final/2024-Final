@@ -69,5 +69,5 @@ Material:
     - _ScrollingSpeed: 0.04
     - _SurfaceMovementSpeed: 0.1
     m_Colors:
-    - _TextureColor: {r: 8.734158, g: 0.7003807, b: 6.6433525, a: 0}
+    - _TextureColor: {r: 11.440772, g: 0.16189742, b: 0.41970077, a: 0}
   m_BuildTextureStacks: []
