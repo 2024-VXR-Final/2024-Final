@@ -13,6 +13,8 @@ TagManager:
   - Easy
   - Medium
   - Hard
+  - Time
+  - Score
   layers:
   - Default
   - TransparentFX
