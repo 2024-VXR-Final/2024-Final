@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ShowMouth : MonoBehaviour
+{
+    [SerializeField] GameObject Mouth;
+    [SerializeField] Animator JoeEating;
+
+    bool MouthActive = false;
+    bool JoeEatingActive = false;
+
+    private void Start()
+    {
+        CueMouth();
+    }
+    void CueMouth()
+    {
+        if (MouthActive == false)
+        {
+            Mouth.SetActive(false);
+            Debug.Log("NoMouth");
+            JoeEatingActive = true;
+            if (JoeEating != null)
+            {
+                NomNom();
+                MouthActive = true;
+                Mouth.SetActive(true);
+            }
+        }
+    }
+    void NomNom()
+    {
+
+        if (JoeEating == true)
+        {
+            JoeEating.SetTrigger("Eat");
+            JoeEatingActive = false;
+            Debug.Log("Yummy");
+        }
+    }
+}
