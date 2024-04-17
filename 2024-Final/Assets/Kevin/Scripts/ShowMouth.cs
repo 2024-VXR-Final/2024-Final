@@ -12,22 +12,7 @@ public class ShowMouth : MonoBehaviour
 
     private void Start()
     {
-        CueMouth();
-    }
-    void CueMouth()
-    {
-        if (MouthActive == false)
-        {
-            Mouth.SetActive(false);
-            Debug.Log("NoMouth");
-            JoeEatingActive = true;
-            if (JoeEating != null)
-            {
-                NomNom();
-                MouthActive = true;
-                Mouth.SetActive(true);
-            }
-        }
+        StartCoroutine("CueMouth");
     }
     void NomNom()
     {
@@ -37,6 +22,23 @@ public class ShowMouth : MonoBehaviour
             JoeEating.SetTrigger("Eat");
             JoeEatingActive = false;
             Debug.Log("Yummy");
+        }
+    }
+
+    private IEnumerator CueMouth() 
+    {
+        if (MouthActive == false)
+        {
+            Mouth.SetActive(false);
+            Debug.Log("NoMouth");
+            JoeEatingActive = true;
+            if (JoeEating != null)
+            {
+                NomNom();
+                yield return new WaitForSeconds(2);
+                MouthActive = true;
+                Mouth.SetActive(true);
+            }
         }
     }
 }
