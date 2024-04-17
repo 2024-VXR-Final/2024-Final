@@ -15,6 +15,9 @@ TagManager:
   - Hard
   - Time
   - Score
+  - ShowInsulin
+  - PlaceInsulin
+  - InsulinKey
   layers:
   - Default
   - TransparentFX

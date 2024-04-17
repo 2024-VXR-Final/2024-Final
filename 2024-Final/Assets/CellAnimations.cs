@@ -22,7 +22,7 @@ public class CellAnimations : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(isOpen)
+            if (isOpen)
             {
                 CloseCell();
             }
@@ -45,16 +45,20 @@ public class CellAnimations : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SmokePoof(); 
-        openCell.gameObject.SetActive(false);
-        HappyCell.SetActive(true);
+        if (other.gameObject.CompareTag("Glucose"))
+        {
+            SmokePoof();
+            openCell.gameObject.SetActive(false);
+            HappyCell.SetActive(true);
+        }
+
     }
-    void OpenCell()
+    public void OpenCell()
     {
         openCell.clip = animationClips[0];
         openCell.Play();
     }
-    void CloseCell()
+    public void CloseCell()
     {
         openCell.clip = animationClips[1];
         openCell.Play();

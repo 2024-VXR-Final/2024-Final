@@ -25,7 +25,7 @@ public class ObjPool : MonoBehaviour
             {
                 spawnPoint = t;
             }
-            else if (t.gameObject.CompareTag("Destroy"))
+            else
             {
                 destroyPoint = t;
             }
