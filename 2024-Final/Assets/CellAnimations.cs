@@ -51,7 +51,6 @@ public class CellAnimations : MonoBehaviour
             openCell.gameObject.SetActive(false);
             HappyCell.SetActive(true);
         }
-
     }
     public void OpenCell()
     {

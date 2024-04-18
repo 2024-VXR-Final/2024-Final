@@ -2,44 +2,62 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using VInspector;
 
 public class InsulinOpener : MonoBehaviour
 {
-    [Tab("InsulinKeyStatic")]
     public UnityEvent openCell;
     public UnityEvent closeCell;
 
-    [Tab("InsulinHole")]
-    [SerializeField] GameObject staticInsulinKey;
+    ///Stuff for replacing materials
+    [SerializeField] Material placementMat;
+    MeshRenderer renderer;
+    List<Material> keyMaterials = new List<Material>();
 
-    [EndTab]
-
+    //Stuff for checking if the thing is grabbed
+    ObjIsGrabbed grabScript = null;
+    bool grabbedOnEnter = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        staticInsulinKey.SetActive(false);
+        renderer = GetComponent<MeshRenderer>();
+        renderer.GetMaterials(keyMaterials);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("ShowInsulin") && other.gameObject.CompareTag("InsulinKey"))
+        if (other.gameObject.CompareTag("InsulinKey"))
         {
-            staticInsulinKey.SetActive(true);
+            grabScript = other.GetComponent<ObjIsGrabbed>();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (gameObject.CompareTag("ShowInsulin") && other.gameObject.CompareTag("InsulinKey"))
-        {
-            staticInsulinKey.SetActive(false);
-        }
+        grabbedOnEnter = false;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        
+        if (grabScript != null)
+        {
+            //If the key is released while in the trigger, destroy it and change the material so it looks like it snapped
+            if (!grabScript.grabbed && other.CompareTag("InsulinKey"))
+            {
+                Destroy(other.gameObject);
+                ChangeMaterial();
+                openCell.Invoke();
+            }
+            else
+            {
+                Debug.Log("Grabbed: " + !grabScript.grabbed + " GrabbedOnEnter: " + grabbedOnEnter);
+            }
+        }
+    }
+
+    void ChangeMaterial()
+    {
+        keyMaterials[0] = placementMat;
+        renderer.SetMaterials(keyMaterials);
     }
 }
