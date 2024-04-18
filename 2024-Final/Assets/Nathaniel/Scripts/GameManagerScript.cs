@@ -11,6 +11,10 @@ public class GameManagerScript : MonoBehaviour
     //HUD so we can display score. We can get required child components on start
     [SerializeField] GameObject userHUD;
 
+    //Animation scripts or whatever
+    //Add these in inspector in the order of easy, medium, hard
+    [SerializeField] Animator[] diffAnimators;
+
     //Labels that will be changed during the game
     TMP_Text scoreLabel;
     TMP_Text timeLabel;
@@ -64,14 +68,23 @@ public class GameManagerScript : MonoBehaviour
         {
             case "Easy":
                 gameDifficulty = 0;
+
+                //Start easy animation
+                diffAnimators[gameDifficulty].SetTrigger("StartE");
                 break;
 
             case "Medium":
                 gameDifficulty = 1;
+
+                //Start Medium Animation
+                diffAnimators[gameDifficulty].SetTrigger("StartM");
                 break;
 
             case "Hard":
                 gameDifficulty = 2;
+
+                //Start Hard Animation
+                diffAnimators[gameDifficulty].SetTrigger("StartH");
                 break;
             
             //By default the difficulty is set to easy
