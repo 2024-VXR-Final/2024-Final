@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CellAnimations : MonoBehaviour
+public class CellSoundAdded : MonoBehaviour
 {
     [SerializeField] Animation openCell;
     [SerializeField] AnimationClip[] animationClips;
     [SerializeField] ParticleSystem change;
     [SerializeField] GameObject HappyCell;
-    [SerializeField] AudioSource HappySound;
+    [SerializeField] AudioSource HappySound; 
 
     bool isOpen;
 
@@ -51,7 +51,8 @@ public class CellAnimations : MonoBehaviour
             SmokePoof();
             openCell.gameObject.SetActive(false);
             HappyCell.SetActive(true);
-
+            
+            // Play the happy sound effect
             HappySound.Play();
         }
     }
@@ -69,5 +70,7 @@ public class CellAnimations : MonoBehaviour
     {
         change.Play();
     }
+
+
 
 }

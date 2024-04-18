@@ -61,6 +61,8 @@ MonoBehaviour:
   - {fileID: 7400000, guid: cbc9577323f47c14080b41e13f0fb256, type: 2}
   change: {fileID: 8927075044898076742}
   HappyCell: {fileID: 6076115335461955538}
+  HappySound: {fileID: 7022892331381279031, guid: 8a0237a7bdd597242a5365f43e17feeb,
+    type: 3}
 --- !u!33 &6961310956029856209
 MeshFilter:
   m_ObjectHideFlags: 0
