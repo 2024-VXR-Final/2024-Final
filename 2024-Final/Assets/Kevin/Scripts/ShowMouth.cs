@@ -6,6 +6,8 @@ public class ShowMouth : MonoBehaviour
 {
     [SerializeField] GameObject Mouth;
     [SerializeField] Animator JoeEating;
+    [SerializeField] GameObject Joe;
+    [SerializeField] Animator Cam;
 
     bool MouthActive = false;
     bool JoeEatingActive = false;
@@ -38,6 +40,9 @@ public class ShowMouth : MonoBehaviour
                 yield return new WaitForSeconds(2);
                 MouthActive = true;
                 Mouth.SetActive(true);
+                yield return new WaitForSeconds(5.35f);
+                Joe.SetActive(false);
+                Mouth.SetActive(false);
             }
         }
     }
