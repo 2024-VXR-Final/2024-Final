@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PancreasButton : MonoBehaviour
-
 {
     public Animator avatarAnimator;
     public AudioSource soundEffect;
+    public GameObject particleSystemObject; // Changed from ParticleSystem to GameObject
     private bool buttonPressed = false;
 
     public void OnButtonPress()
@@ -24,6 +24,9 @@ public class PancreasButton : MonoBehaviour
             // Invoke a method to play the sound effect after a delay (e.g., 3 seconds)
             Invoke("PlaySoundEffect", 3f);
 
+            // Invoke a method to enable the particle system after a delay (e.g., 3 seconds)
+            Invoke("EnableParticleSystem", 3f);
+
             // Invoke a method to reset the button press after a delay (e.g., 4 seconds)
             Invoke("ResetButtonPressed", 4f);
         }
@@ -34,6 +37,13 @@ public class PancreasButton : MonoBehaviour
     {
         // Play the sound effect
         soundEffect.Play();
+    }
+
+    // Method to enable the particle system
+    private void EnableParticleSystem()
+    {
+        // Enable the particle system GameObject
+        particleSystemObject.SetActive(true);
     }
 
     // Method to reset the button press after a delay
