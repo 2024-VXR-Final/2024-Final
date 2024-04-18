@@ -70,21 +70,21 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 0;
 
                 //Start easy animation
-                diffAnimators[gameDifficulty].Play("AnimationLayer.AnimationName");
+                diffAnimators[gameDifficulty].SetTrigger("StartE");
                 break;
 
             case "Medium":
                 gameDifficulty = 1;
 
                 //Start Medium Animation
-                diffAnimators[gameDifficulty].Play("AnimationLayer.AnimationName");
+                diffAnimators[gameDifficulty].SetTrigger("StartM");
                 break;
 
             case "Hard":
                 gameDifficulty = 2;
 
                 //Start Hard Animation
-                diffAnimators[gameDifficulty].Play("AnimationLayer.AnimationName");
+                diffAnimators[gameDifficulty].SetTrigger("StartH");
                 break;
             
             //By default the difficulty is set to easy

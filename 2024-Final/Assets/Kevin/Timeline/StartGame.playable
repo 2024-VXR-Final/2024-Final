@@ -234,7 +234,7 @@ MonoBehaviour:
     m_Start: 7
     m_ClipIn: 0
     m_Asset: {fileID: 2926942325673501136}
-    m_Duration: 7
+    m_Duration: 8
     m_TimeScale: 1
     m_ParentTrack: {fileID: 2945004607807772102}
     m_EaseInDuration: 0
@@ -282,10 +282,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CameraPan
   - m_Version: 1
-    m_Start: 14
+    m_Start: 15
     m_ClipIn: 0
     m_Asset: {fileID: 5296007864378778646}
-    m_Duration: 4
+    m_Duration: 5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 2945004607807772102}
     m_EaseInDuration: 0
