@@ -30,7 +30,7 @@ public class CellAnimations : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Glucose"))
         {
-            other.gameObject.GetComponent<PooledObject>().ReleaseObject();
+            //other.gameObject.GetComponent<PooledObject>().ReleaseObject();
             ChangeCell();
         }
     }
