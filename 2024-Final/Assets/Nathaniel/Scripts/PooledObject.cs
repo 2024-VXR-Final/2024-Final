@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(MeshCollider))]
+//[RequireComponent (typeof(Collider))]
 
 public class PooledObject : MonoBehaviour
 {
@@ -35,6 +35,11 @@ public class PooledObject : MonoBehaviour
 
     //This should (hopefully) stop errors when you exit play mode
     private void OnApplicationQuit()
+    {
+        objPool.Release(this);
+    }
+
+    private void ReleaseObject()
     {
         objPool.Release(this);
     }

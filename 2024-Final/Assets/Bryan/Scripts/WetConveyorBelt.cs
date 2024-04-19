@@ -5,7 +5,7 @@ using UnityEngine;
 public class WetConveyorBelt : MonoBehaviour
 {
     
-    [SerializeField] public Vector3[] movement;
+    [SerializeField] public Transform[] movement;
     [SerializeField] public int speed = 1;
 
     private int nextSpot = 0;
@@ -32,13 +32,14 @@ public class WetConveyorBelt : MonoBehaviour
         {
             Vector3 start = this.transform.position;
 
-            while (this.transform.position != movement[nextSpot])
+            while (this.transform.position != movement[nextSpot].position)
             {
                 float tempSpeed = Time.deltaTime * speed;
-                this.transform.position = Vector3.MoveTowards(start, movement[nextSpot], tempSpeed);
+                this.transform.position = Vector3.MoveTowards(start, movement[nextSpot].position, tempSpeed);
                 yield return null;
             }
             nextSpot++;
+            Debug.Log(nextSpot);
         }
     }
 }
