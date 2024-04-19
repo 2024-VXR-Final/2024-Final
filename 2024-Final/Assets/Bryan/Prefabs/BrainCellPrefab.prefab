@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1981869867960803824}
   m_Layer: 0
   m_Name: BrainCellPrefab
-  m_TagString: Untagged
+  m_TagString: BrainCell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,14 +31,14 @@ Transform:
   m_GameObject: {fileID: 275006524424229442}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.066, y: 2.7, z: -0.132}
+  m_LocalPosition: {x: -0.554, y: 10.071, z: 1.2190073}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 8440758667944131312}
-  - {fileID: 812009366165007839}
-  - {fileID: 4794016796304070729}
   - {fileID: 3794962251735094546}
+  - {fileID: 812009366165007839}
+  - {fileID: 8440758667944131312}
+  - {fileID: 4794016796304070729}
   - {fileID: 8361841120944943498}
   - {fileID: 2167448304101318809}
   m_Father: {fileID: 0}
@@ -61,6 +61,8 @@ MonoBehaviour:
   - {fileID: 7400000, guid: cbc9577323f47c14080b41e13f0fb256, type: 2}
   change: {fileID: 2215568517335599467}
   HappyCell: {fileID: 9108611494507683914}
+  HappySound: {fileID: 0}
+  isHappy: 0
 --- !u!33 &6044685892433050024
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -133,7 +135,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -178,7 +180,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -264,7 +266,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -394,9 +396,9 @@ Transform:
   m_GameObject: {fileID: 7962937761883915379}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0006599999, y: -0.00058, z: 0.0010100007}
-  m_LocalScale: {x: 0.0006475, y: 0.0006474998, z: 0.0006474998}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.0006599999, y: -0.0006, z: -0.0009}
+  m_LocalScale: {x: -0.0012261114, y: -0.0012261114, z: -0.0012261114}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7690668047833259529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5145,7 +5147,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 9d28adb0e78fc4145be81620b4e512ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5169,15 +5171,15 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.4
-  m_MaxParticleSize: 1.42
+  m_MinParticleSize: 0.0007
+  m_MaxParticleSize: 2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 0
+  m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_EnableGPUInstancing: 1
@@ -5628,7 +5630,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: aa512fa097d893b4b98a45d6c5b70d9d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

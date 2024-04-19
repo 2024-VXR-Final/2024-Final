@@ -11,6 +11,7 @@ public class CellAnimations : MonoBehaviour
     [SerializeField] AudioSource HappySound;
 
     bool isOpen;
+    public bool isHappy = false;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +53,12 @@ public class CellAnimations : MonoBehaviour
             openCell.gameObject.SetActive(false);
             HappyCell.SetActive(true);
 
-            HappySound.Play();
+            if (HappySound != null)
+            {
+                HappySound.Play();
+            }
+
+            isHappy = true;
         }
     }
     public void OpenCell()
