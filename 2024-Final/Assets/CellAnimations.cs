@@ -26,6 +26,15 @@ public class CellAnimations : MonoBehaviour
     {
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Glucose"))
+        {
+            other.gameObject.GetComponent<PooledObject>().ReleaseObject();
+            ChangeCell();
+        }
+    }
+
     public void OpenCell()
     {
         openCell.clip = animationClips[0];

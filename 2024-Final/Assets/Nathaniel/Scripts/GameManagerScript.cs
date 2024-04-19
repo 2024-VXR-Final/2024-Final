@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using static UnityEngine.InputManagerEntry;
 using UnityEngine.SceneManagement;
+using Unity.XR.CoreUtils;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject Mouth;
     [SerializeField] Animator JoeEating;
     [SerializeField] GameObject Joe;
+
+    XROrigin xrOrigin;
 
     bool MouthActive = false;
     bool JoeEatingActive = false;
@@ -60,6 +63,8 @@ public class GameManagerScript : MonoBehaviour
                 timeLabel = label;
             }
         }
+
+        xrOrigin = XRRig.GetComponent<XROrigin>();
     }
 
     private void FixedUpdate()
@@ -89,8 +94,7 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 0;
 
                 //Changes cam from player to the animation
-                AnimationCamera.enabled = true;
-                MainCamera.enabled = false;
+                xrOrigin.Camera = AnimationCamera;
                 //Start easy animation
                 diffAnimators[gameDifficulty].SetTrigger("StartE");
                 StartCameraAnimation();
@@ -102,8 +106,8 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 1;
 
                 //Changes cam from player to the animation
-                AnimationCamera.enabled = true;
                 MainCamera.enabled = false;
+                AnimationCamera.enabled = true;
                 //Start Medium Animation
                 diffAnimators[gameDifficulty].SetTrigger("StartM");
                 StartCameraAnimation();
@@ -115,8 +119,8 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 2;
 
                 //Changes cam from player to the animation
-                AnimationCamera.enabled = true;
                 MainCamera.enabled = false;
+                AnimationCamera.enabled = true;
                 //Start Hard Animation for both food and camera
                 diffAnimators[gameDifficulty].SetTrigger("StartH");
                 StartCameraAnimation();
@@ -183,9 +187,9 @@ public class GameManagerScript : MonoBehaviour
         }
     }
     //CoRoutine to load the gameplay scene
-    /*private IEnumerator ChangeToGame()
+    private IEnumerator ChangeToGame()
     {
         yield return new WaitForSeconds(23);
-        SceneManager.LoadScene("1");
-    }*/
+        SceneManager.LoadScene("GamePlayScene");
+    }
 }

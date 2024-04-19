@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class Instructions : MonoBehaviour
-
-
 {
     public GameObject firstCanvas; // Reference to the first canvas GameObject
     public GameObject secondCanvas; // Reference to the second canvas GameObject
+   
+    public GameObject buttonToEnable; // Reference to the button GameObject you want to enable
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class Instructions : MonoBehaviour
         firstCanvas.SetActive(true);
     }
 
-    // Method to switch to the second canvas and disable the button
+    // Method to switch to the second canvas, start playing music, and disable the button
     public void ShowSecondCanvasAndDisableButton(GameObject buttonObject)
     {
         // Disable the first canvas
@@ -27,6 +27,12 @@ public class Instructions : MonoBehaviour
 
         // Deactivate the button GameObject
         buttonObject.SetActive(false);
+
+        // Enable the specified button
+        if (buttonToEnable != null)
+        {
+            buttonToEnable.SetActive(true);
+        }
     }
 }
 

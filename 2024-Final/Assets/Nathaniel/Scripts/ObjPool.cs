@@ -13,23 +13,29 @@ public class ObjPool : MonoBehaviour
     [SerializeField] int maxPoolSize = 5;
     public IObjectPool<PooledObject> pool;
 
+    int spawnedObjects;
+
 
     // Start is called before the first frame update
     void Awake()
     {
         //Get spawn and destroy locations
         var transforms = GetComponentsInChildren<Transform>();
-        foreach (Transform t in transforms)
+        if (transforms != null )
         {
-            if (t.gameObject.CompareTag("Spawn"))
+            foreach (Transform t in transforms)
             {
-                spawnPoint = t;
-            }
-            else
-            {
-                destroyPoint = t;
+                if (t.gameObject.CompareTag("Spawn"))
+                {
+                    spawnPoint = t;
+                }
+                else
+                {
+                    destroyPoint = t;
+                }
             }
         }
+
 
         pool = new ObjectPool<PooledObject>(CreateObj, OnGet, OnRelease, OnDestroyObj, maxSize: maxPoolSize);
         StartCoroutine(SpawnOnTimer());
@@ -47,13 +53,17 @@ public class ObjPool : MonoBehaviour
     private void OnGet(PooledObject obj)
     {
         obj.gameObject.SetActive(true);
+        spawnedObjects++;
         obj.transform.position = spawnPoint.position;
+        obj.GetComponent<Animator>().enabled = true;
     }
 
     //Sets an object to inactive once it is released
     private void OnRelease(PooledObject obj)
     {
         obj.gameObject.SetActive(false);
+        spawnedObjects--;
+        obj.GetComponent<Animator>().enabled = false;
     }
 
     //Destroys object
@@ -65,9 +75,18 @@ public class ObjPool : MonoBehaviour
     //Spawns a new object every second
     public IEnumerator SpawnOnTimer()
     {
+        if (gameObject.CompareTag("InsulinKey"))
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+
         while (true)
         {
-            pool.Get();
+            if (spawnedObjects <= maxPoolSize)
+            {
+                pool.Get();
+            }
+
             yield return new WaitForSeconds(1);
         }
     }
