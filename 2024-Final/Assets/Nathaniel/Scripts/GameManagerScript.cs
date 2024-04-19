@@ -9,8 +9,7 @@ using Unity.XR.CoreUtils;
 public class GameManagerScript : MonoBehaviour
 {
     //The two cams, one for player and one for the animations
-    [SerializeField] Camera AnimationCamera;
-    [SerializeField] Camera MainCamera;
+    [SerializeField] GameObject ZoomByTimAllen;
 
     //Fields for Joe and his animations
     [SerializeField] GameObject Mouth;
@@ -47,9 +46,7 @@ public class GameManagerScript : MonoBehaviour
         DontDestroyOnLoad(this);
         DontDestroyOnLoad(XRRig);
 
-        //Makes sure proper cams are enabled
-        AnimationCamera.enabled = false;
-        MainCamera.enabled = true;
+        ZoomByTimAllen.SetActive(false);
         //Gets both labels and assigns them to their proper variables
         TMP_Text[] labels = userHUD.GetComponentsInChildren<TMP_Text>();
 
@@ -92,11 +89,10 @@ public class GameManagerScript : MonoBehaviour
         {
             case "Easy":
                 gameDifficulty = 0;
-
-                //Changes cam from player to the animation
-                xrOrigin.Camera = AnimationCamera;
+                Debug.Log("Easy selected");
                 //Start easy animation
                 diffAnimators[gameDifficulty].SetTrigger("StartE");
+                ZoomByTimAllen.SetActive(true);
                 StartCameraAnimation();
                 StartCoroutine("CueMouth");
                 StartCoroutine("ChangeToGame");
@@ -104,12 +100,11 @@ public class GameManagerScript : MonoBehaviour
 
             case "Medium":
                 gameDifficulty = 1;
-
-                //Changes cam from player to the animation
-                MainCamera.enabled = false;
-                AnimationCamera.enabled = true;
+                Debug.Log("MeduimSelected");
+                ZoomByTimAllen.SetActive(true);
                 //Start Medium Animation
                 diffAnimators[gameDifficulty].SetTrigger("StartM");
+                ZoomByTimAllen.SetActive(true);
                 StartCameraAnimation();
                 StartCoroutine("CueMouth");
                 StartCoroutine("ChangeToGame");
@@ -117,12 +112,10 @@ public class GameManagerScript : MonoBehaviour
 
             case "Hard":
                 gameDifficulty = 2;
-
-                //Changes cam from player to the animation
-                MainCamera.enabled = false;
-                AnimationCamera.enabled = true;
+                Debug.Log("HardSelected");
                 //Start Hard Animation for both food and camera
                 diffAnimators[gameDifficulty].SetTrigger("StartH");
+                ZoomByTimAllen.SetActive(true);
                 StartCameraAnimation();
                 StartCoroutine("CueMouth");
                 StartCoroutine("ChangeToGame");
@@ -189,7 +182,7 @@ public class GameManagerScript : MonoBehaviour
     //CoRoutine to load the gameplay scene
     private IEnumerator ChangeToGame()
     {
-        yield return new WaitForSeconds(23);
+        yield return new WaitForSeconds(21);
         SceneManager.LoadScene("GamePlayScene");
     }
 }
