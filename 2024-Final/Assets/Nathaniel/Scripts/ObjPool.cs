@@ -71,7 +71,7 @@ public class ObjPool : MonoBehaviour
     {
         while (true)
         {
-            if (spawnedObjects <= 5)
+            if (spawnedObjects <= maxPoolSize)
             {
                 pool.Get();
             }
