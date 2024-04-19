@@ -7,7 +7,6 @@ public class ShowMouth : MonoBehaviour
     [SerializeField] GameObject Mouth;
     [SerializeField] Animator JoeEating;
     [SerializeField] GameObject Joe;
-    [SerializeField] Animator Cam;
 
     bool MouthActive = false;
     bool JoeEatingActive = false;

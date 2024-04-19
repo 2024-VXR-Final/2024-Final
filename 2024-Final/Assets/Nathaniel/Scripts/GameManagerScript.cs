@@ -2,9 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using static UnityEngine.InputManagerEntry;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
+    //The two cams, one for player and one for the animations
+    [SerializeField] Camera AnimationCamera;
+    [SerializeField] Camera MainCamera;
+
+    //Fields for Joe and his animations
+    [SerializeField] GameObject Mouth;
+    [SerializeField] Animator JoeEating;
+    [SerializeField] GameObject Joe;
+
+    bool MouthActive = false;
+    bool JoeEatingActive = false;
+
+    [SerializeField] Animator AnimationCam;
+
     //XR Rig so we can prevent it from being destroyed when we change scenes
     [SerializeField] GameObject XRRig;
 
@@ -28,6 +44,9 @@ public class GameManagerScript : MonoBehaviour
         DontDestroyOnLoad(this);
         DontDestroyOnLoad(XRRig);
 
+        //Makes sure proper cams are enabled
+        AnimationCamera.enabled = false;
+        MainCamera.enabled = true;
         //Gets both labels and assigns them to their proper variables
         TMP_Text[] labels = userHUD.GetComponentsInChildren<TMP_Text>();
 
@@ -45,7 +64,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        timeLabel.text = "Time: " + Time.realtimeSinceStartup;
+        //timeLabel.text = "Time: " + Time.realtimeSinceStartup;
     }
 
     private void OnEnable()
@@ -69,22 +88,40 @@ public class GameManagerScript : MonoBehaviour
             case "Easy":
                 gameDifficulty = 0;
 
+                //Changes cam from player to the animation
+                AnimationCamera.enabled = true;
+                MainCamera.enabled = false;
                 //Start easy animation
                 diffAnimators[gameDifficulty].SetTrigger("StartE");
+                StartCameraAnimation();
+                StartCoroutine("CueMouth");
+                StartCoroutine("ChangeToGame");
                 break;
 
             case "Medium":
                 gameDifficulty = 1;
 
+                //Changes cam from player to the animation
+                AnimationCamera.enabled = true;
+                MainCamera.enabled = false;
                 //Start Medium Animation
                 diffAnimators[gameDifficulty].SetTrigger("StartM");
+                StartCameraAnimation();
+                StartCoroutine("CueMouth");
+                StartCoroutine("ChangeToGame");
                 break;
 
             case "Hard":
                 gameDifficulty = 2;
 
-                //Start Hard Animation
+                //Changes cam from player to the animation
+                AnimationCamera.enabled = true;
+                MainCamera.enabled = false;
+                //Start Hard Animation for both food and camera
                 diffAnimators[gameDifficulty].SetTrigger("StartH");
+                StartCameraAnimation();
+                StartCoroutine("CueMouth");
+                StartCoroutine("ChangeToGame");
                 break;
             
             //By default the difficulty is set to easy
@@ -107,4 +144,48 @@ public class GameManagerScript : MonoBehaviour
     {
 
     }
+    void StartCameraAnimation()
+    {
+
+        if (AnimationCam != null)
+        {
+            AnimationCam.SetTrigger("Change");
+            Debug.Log("Zoomin");
+        }
+    }
+    private IEnumerator CueMouth()
+    {
+        if (MouthActive == false)
+        {
+            Mouth.SetActive(false);
+            Debug.Log("NoMouth");
+            JoeEatingActive = true;
+            if (JoeEating != null)
+            {
+                NomNom();
+                yield return new WaitForSeconds(2);
+                MouthActive = true;
+                Mouth.SetActive(true);
+                yield return new WaitForSeconds(5.35f);
+                Joe.SetActive(false);
+                Mouth.SetActive(false);
+            }
+        }
+    }
+    void NomNom()
+    {
+
+        if (JoeEating == true)
+        {
+            JoeEating.SetTrigger("Eat");
+            JoeEatingActive = false;
+            Debug.Log("Yummy");
+        }
+    }
+    //CoRoutine to load the gameplay scene
+    /*private IEnumerator ChangeToGame()
+    {
+        yield return new WaitForSeconds(23);
+        SceneManager.LoadScene("1");
+    }*/
 }

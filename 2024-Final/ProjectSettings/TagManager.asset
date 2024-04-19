@@ -21,6 +21,7 @@ TagManager:
   - HeartCell
   - BrainCell
   - BloodCell
+  - levelExit
   layers:
   - Default
   - TransparentFX
