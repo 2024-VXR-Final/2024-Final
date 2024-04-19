@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Baloon : MonoBehaviour
+public class WetConveyorBelt : MonoBehaviour
 {
     
     [SerializeField] public Vector3[] movement;
@@ -27,7 +27,8 @@ public class Baloon : MonoBehaviour
 
     IEnumerator Move()
     {
-        while(true)
+        Debug.Log("pathLength");
+        while(nextSpot < pathLength)
         {
             Vector3 start = this.transform.position;
 
@@ -35,6 +36,7 @@ public class Baloon : MonoBehaviour
             {
                 float tempSpeed = Time.deltaTime * speed;
                 this.transform.position = Vector3.MoveTowards(start, movement[nextSpot], tempSpeed);
+                yield return null;
             }
             nextSpot++;
         }
