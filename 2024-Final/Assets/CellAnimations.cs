@@ -49,18 +49,10 @@ public class CellAnimations : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Glucose"))
         {
-            SmokePoof();
-            openCell.gameObject.SetActive(false);
-            HappyCell.SetActive(true);
-
-            if (HappySound != null)
-            {
-                HappySound.Play();
-            }
-
-            isHappy = true;
+            ChangeCell();
         }
     }
+
     public void OpenCell()
     {
         openCell.clip = animationClips[0];
@@ -75,5 +67,17 @@ public class CellAnimations : MonoBehaviour
     {
         change.Play();
     }
+    void ChangeCell()
+    {
+        SmokePoof();
+        openCell.gameObject.SetActive(false);
+        HappyCell.SetActive(true);
 
+        if (HappySound != null)
+        {
+            HappySound.Play();
+        }
+
+        isHappy = true;
+    }
 }

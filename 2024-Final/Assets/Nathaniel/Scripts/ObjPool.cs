@@ -13,6 +13,8 @@ public class ObjPool : MonoBehaviour
     [SerializeField] int maxPoolSize = 5;
     public IObjectPool<PooledObject> pool;
 
+    public static int spawnedObjects;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -47,6 +49,7 @@ public class ObjPool : MonoBehaviour
     private void OnGet(PooledObject obj)
     {
         obj.gameObject.SetActive(true);
+        spawnedObjects++;
         obj.transform.position = spawnPoint.position;
     }
 
@@ -54,6 +57,7 @@ public class ObjPool : MonoBehaviour
     private void OnRelease(PooledObject obj)
     {
         obj.gameObject.SetActive(false);
+        spawnedObjects--;
     }
 
     //Destroys object
@@ -67,7 +71,11 @@ public class ObjPool : MonoBehaviour
     {
         while (true)
         {
-            pool.Get();
+            if (spawnedObjects <= 5)
+            {
+                pool.Get();
+            }
+
             yield return new WaitForSeconds(1);
         }
     }
