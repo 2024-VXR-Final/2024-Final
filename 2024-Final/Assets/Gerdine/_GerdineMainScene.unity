@@ -424,10 +424,11 @@ PrefabInstance:
     - target: {fileID: 664293980497432357, guid: f6f84365011426f40affe5c1427f1e08,
         type: 3}
       propertyPath: m_text
-      value: "Grab a Blood cell/Brain cell/Heart cell\nGrab a yellow insulin key\nConnect
-        the key to the cell to open it up\nwith the open cell catch a glucose cell
-        in the pipe\nwhen the glucose has entered the cell you'll see it has energy
-        and you can put it in the suction pipe to go back to the body \n"
+      value: "Grab a Blood cell/Brain cell/Heart cell from the table\nGrab a yellow
+        insulin key from the blue tube \nConnect the key to the cell to open it up\nwith
+        the open cell catch a glucose cell in the pipe\nwhen the glucose has entered
+        the cell you'll see it has energy and you can put it in the suction pipe
+        to go back to the body \n"
       objectReference: {fileID: 0}
     - target: {fileID: 664293980497432357, guid: f6f84365011426f40affe5c1427f1e08,
         type: 3}
@@ -1047,6 +1048,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1001 &1588470595459390952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8457736194644785670, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_Name
+      value: TracheaClosed 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -48.7298
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -59.502407
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084951144730747068, guid: d7e969de15f85ed4f81d618c092c435f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7e969de15f85ed4f81d618c092c435f, type: 3}
 --- !u!1001 &2251705126818143013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1255,3 +1324,4 @@ SceneRoots:
   - {fileID: 1172791083}
   - {fileID: 456508409}
   - {fileID: 4259190731626006346}
+  - {fileID: 1588470595459390952}
