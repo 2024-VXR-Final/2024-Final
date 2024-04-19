@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -218,6 +218,163 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.06
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &296875303
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.556
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 191705897057105630, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520031436839141923, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_Name
+      value: InstructionsInsideBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284189501311230543, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_text
+      value: "Grab a yellow insulin key from the blue tube \nGrab a Blood cell/Brain
+        cell/Heart cell from the table\nConnect the key to the yellow part of the
+        cell to open it up\nwith the open cell catch a purple glucose cell in the
+        blue pipe\nwhen the glucose has entered the cell you'll see it has energy
+        and you can put it in the suction pipe to go back to the body \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284189501311230543, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284189501311230543, guid: 02f530c744f87df41912bce2ca38042a,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02f530c744f87df41912bce2ca38042a, type: 3}
 --- !u!1 &324924259
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +760,11 @@ PrefabInstance:
       propertyPath: m_RenderAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1988272764776526578, guid: 14a3be59acc04cd41849474661b1cc1f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
     - target: {fileID: 2178137357618653717, guid: 14a3be59acc04cd41849474661b1cc1f,
         type: 3}
       propertyPath: m_Name
@@ -1478,7 +1640,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: df6ff0221c86eb44089c6d915cabeb36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1971,6 +2133,11 @@ PrefabInstance:
       propertyPath: m_RenderAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3924833166152523588, guid: 8033576a165a93f4497866856a11feb3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
     - target: {fileID: 3924833166152523588, guid: 8033576a165a93f4497866856a11feb3,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -2618,7 +2785,7 @@ GameObject:
   - component: {fileID: 3950504999271654921}
   - component: {fileID: 9154453398570654515}
   m_Layer: 0
-  m_Name: SuctionTubeTrigger
+  m_Name: BackgroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2638,7 +2805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundEffect: {fileID: 8300000, guid: 0f0e0424e87a9c4478cc0ee87ac49747, type: 3}
   audioSource: {fileID: 3950504999271654921}
-  minVolume: 0.05
+  minVolume: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2666,3 +2833,4 @@ SceneRoots:
   - {fileID: 1989229683}
   - {fileID: 3488388791853704455}
   - {fileID: 1467178205}
+  - {fileID: 296875303}

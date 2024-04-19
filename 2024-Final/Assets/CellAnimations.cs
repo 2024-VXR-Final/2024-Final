@@ -28,9 +28,10 @@ public class CellAnimations : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.gameObject.CompareTag("Glucose"))
         {
-            //other.gameObject.GetComponent<PooledObject>().ReleaseObject();
+            other.gameObject.GetComponentInParent<PooledObject>().ReleaseObject();
             ChangeCell();
         }
     }
