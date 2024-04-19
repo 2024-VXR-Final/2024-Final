@@ -2034,7 +2034,8 @@ PrefabInstance:
       value: Organs
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1922598483431072099, guid: ba89f3f7cee090e429460bc1072ceda6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba89f3f7cee090e429460bc1072ceda6, type: 3}
