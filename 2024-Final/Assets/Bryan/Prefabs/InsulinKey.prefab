@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5810818063623656749}
   - component: {fileID: 2969427827617167936}
   - component: {fileID: 1365707590296967135}
+  - component: {fileID: 6312717398622203674}
   m_Layer: 0
   m_Name: InsulinKey
   m_TagString: InsulinKey
@@ -109,8 +110,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -325,3 +326,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabbed: 0
+--- !u!114 &6312717398622203674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501423460059656094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e4eaf402b006145b9a2b9458f6259d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

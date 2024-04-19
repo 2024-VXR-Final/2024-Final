@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using static UnityEngine.InputManagerEntry;
 using UnityEngine.SceneManagement;
+using Unity.XR.CoreUtils;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] GameObject Mouth;
     [SerializeField] Animator JoeEating;
     [SerializeField] GameObject Joe;
+
+    XROrigin xrOrigin;
 
     bool MouthActive = false;
     bool JoeEatingActive = false;
@@ -60,6 +63,8 @@ public class GameManagerScript : MonoBehaviour
                 timeLabel = label;
             }
         }
+
+        xrOrigin = XRRig.GetComponent<XROrigin>();
     }
 
     private void FixedUpdate()
@@ -89,8 +94,7 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 0;
 
                 //Changes cam from player to the animation
-                AnimationCamera.enabled = true;
-                MainCamera.enabled = false;
+                xrOrigin.Camera = AnimationCamera;
                 //Start easy animation
                 diffAnimators[gameDifficulty].SetTrigger("StartE");
                 StartCameraAnimation();

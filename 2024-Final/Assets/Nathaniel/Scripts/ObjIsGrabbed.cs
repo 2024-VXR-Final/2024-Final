@@ -6,11 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ObjIsGrabbed : MonoBehaviour
 {
     public bool grabbed = false;
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     public void Grabbed(SelectEnterEventArgs args)
@@ -21,5 +22,7 @@ public class ObjIsGrabbed : MonoBehaviour
     public void Released(SelectExitEventArgs args)
     {
         grabbed = false;
+        rb.isKinematic = false;
+        rb.useGravity = true;
     }
 }

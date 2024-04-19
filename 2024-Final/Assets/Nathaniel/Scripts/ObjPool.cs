@@ -21,17 +21,21 @@ public class ObjPool : MonoBehaviour
     {
         //Get spawn and destroy locations
         var transforms = GetComponentsInChildren<Transform>();
-        foreach (Transform t in transforms)
+        if (transforms != null )
         {
-            if (t.gameObject.CompareTag("Spawn"))
+            foreach (Transform t in transforms)
             {
-                spawnPoint = t;
-            }
-            else
-            {
-                destroyPoint = t;
+                if (t.gameObject.CompareTag("Spawn"))
+                {
+                    spawnPoint = t;
+                }
+                else
+                {
+                    destroyPoint = t;
+                }
             }
         }
+
 
         pool = new ObjectPool<PooledObject>(CreateObj, OnGet, OnRelease, OnDestroyObj, maxSize: maxPoolSize);
         StartCoroutine(SpawnOnTimer());
@@ -51,6 +55,7 @@ public class ObjPool : MonoBehaviour
         obj.gameObject.SetActive(true);
         spawnedObjects++;
         obj.transform.position = spawnPoint.position;
+        obj.GetComponent<Animator>();
     }
 
     //Sets an object to inactive once it is released
