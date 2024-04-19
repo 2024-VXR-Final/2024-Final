@@ -10,6 +10,7 @@ public class HappyCellBox : MonoBehaviour
     XRGrabInteractable interactable;
     bool cellIsHappy;
     Animator animator;
+    [SerializeField] AudioClip clip;
 
     //Get animator on start
     private void Start()
@@ -29,6 +30,7 @@ public class HappyCellBox : MonoBehaviour
             //If its happy, start the despawn timer
             if (cellIsHappy)
             {
+                objToDespawn.GetComponent<AudioSource>().PlayOneShot(clip);
                 DespawnTimer();
             }
         }
