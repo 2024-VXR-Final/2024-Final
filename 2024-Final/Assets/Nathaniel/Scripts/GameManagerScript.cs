@@ -89,8 +89,8 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 0;
 
                 //Changes cam from player to the animation
-                AnimationCamera.enabled = true;
                 MainCamera.enabled = false;
+                AnimationCamera.enabled = true;
                 //Start easy animation
                 diffAnimators[gameDifficulty].SetTrigger("StartE");
                 StartCameraAnimation();
@@ -102,8 +102,8 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 1;
 
                 //Changes cam from player to the animation
-                AnimationCamera.enabled = true;
                 MainCamera.enabled = false;
+                AnimationCamera.enabled = true;
                 //Start Medium Animation
                 diffAnimators[gameDifficulty].SetTrigger("StartM");
                 StartCameraAnimation();
@@ -115,8 +115,8 @@ public class GameManagerScript : MonoBehaviour
                 gameDifficulty = 2;
 
                 //Changes cam from player to the animation
-                AnimationCamera.enabled = true;
                 MainCamera.enabled = false;
+                AnimationCamera.enabled = true;
                 //Start Hard Animation for both food and camera
                 diffAnimators[gameDifficulty].SetTrigger("StartH");
                 StartCameraAnimation();
@@ -183,9 +183,9 @@ public class GameManagerScript : MonoBehaviour
         }
     }
     //CoRoutine to load the gameplay scene
-    /*private IEnumerator ChangeToGame()
+    private IEnumerator ChangeToGame()
     {
         yield return new WaitForSeconds(23);
-        SceneManager.LoadScene("1");
-    }*/
+        SceneManager.LoadScene("GamePlayScene");
+    }
 }

@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+   private IEnumerator ChangeScenePlease()
     {
-        if (other.tag == "levelExit")
-        {
-            SceneManager.LoadScene("1");
-        }
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("GamePlayScene");
+    }
+    private void Start()
+    {
+        StartCoroutine(ChangeScenePlease());
     }
 }
