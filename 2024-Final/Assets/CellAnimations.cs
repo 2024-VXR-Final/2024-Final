@@ -45,22 +45,6 @@ public class CellAnimations : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Glucose"))
-        {
-            SmokePoof();
-            openCell.gameObject.SetActive(false);
-            HappyCell.SetActive(true);
-
-            if (HappySound != null)
-            {
-                HappySound.Play();
-            }
-
-            isHappy = true;
-        }
-    }
     public void OpenCell()
     {
         openCell.clip = animationClips[0];
@@ -75,5 +59,17 @@ public class CellAnimations : MonoBehaviour
     {
         change.Play();
     }
+    void ChangeCell()
+    {
+        SmokePoof();
+        openCell.gameObject.SetActive(false);
+        HappyCell.SetActive(true);
 
+        if (HappySound != null)
+        {
+            HappySound.Play();
+        }
+
+        isHappy = true;
+    }
 }
