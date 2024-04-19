@@ -1248,6 +1248,11 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7886643885355401787, guid: 6722b65825520ed4a9422a9177cb9515,
+        type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8293802469856469606, guid: 6722b65825520ed4a9422a9177cb9515,
         type: 3}
       propertyPath: m_LocalPosition.x
