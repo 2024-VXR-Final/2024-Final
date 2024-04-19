@@ -495,6 +495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 1402644616893738717, guid: 18c808d833af3a44891c70ba857d5868,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1650735914406745902, guid: 18c808d833af3a44891c70ba857d5868,
         type: 3}
       propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.size
@@ -720,6 +725,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3200844422563851266, guid: 18c808d833af3a44891c70ba857d5868,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 999388198}
     - target: {fileID: 3246338672928873730, guid: 18c808d833af3a44891c70ba857d5868,
         type: 3}
       propertyPath: m_TagString
@@ -1643,6 +1653,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &999388198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3827791577991775092, guid: 18c808d833af3a44891c70ba857d5868,
+    type: 3}
+  m_PrefabInstance: {fileID: 165050233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1082357930 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5306349882927454183, guid: 18c808d833af3a44891c70ba857d5868,
