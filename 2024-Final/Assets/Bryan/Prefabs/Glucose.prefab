@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 645109464450657473}
   m_Layer: 0
   m_Name: GlucoseFaceLow
-  m_TagString: Untagged
+  m_TagString: Glucose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
