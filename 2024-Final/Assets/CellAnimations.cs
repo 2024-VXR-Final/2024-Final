@@ -10,13 +10,15 @@ public class CellAnimations : MonoBehaviour
     [SerializeField] GameObject HappyCell;
     [SerializeField] AudioSource HappySound;
 
-    bool isOpen;
     public bool isHappy = false;
+    MeshCollider collider;
+    Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
-        isOpen = false;
+        collider = GetComponent<MeshCollider>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,9 @@ public class CellAnimations : MonoBehaviour
     {
         openCell.clip = animationClips[0];
         openCell.Play();
+        collider.convex = false;
+        rigidbody.useGravity = false;
+        rigidbody.isKinematic = true;
     }
     public void CloseCell()
     {
@@ -50,5 +55,8 @@ public class CellAnimations : MonoBehaviour
         }
 
         isHappy = true;
+        collider.convex = true;
+        rigidbody.useGravity = true;
+        rigidbody.isKinematic = false;
     }
 }
