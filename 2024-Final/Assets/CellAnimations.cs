@@ -22,27 +22,6 @@ public class CellAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (isOpen)
-            {
-                CloseCell();
-            }
-            else
-            {
-                OpenCell();
-            }
-            isOpen = !isOpen;
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            SmokePoof();
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            openCell.gameObject.SetActive(false);
-            HappyCell.SetActive(true);
-        }
     }
 
     public void OpenCell()

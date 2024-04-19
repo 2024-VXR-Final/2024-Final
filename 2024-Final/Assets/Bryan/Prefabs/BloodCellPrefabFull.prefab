@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2178137357618653717}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7068685, y: -0.018356984, z: -0.018356984, w: 0.7068684}
+  m_LocalRotation: {x: -0.7068685, y: -0.018355675, z: -0.018355675, w: 0.7068685}
   m_LocalPosition: {x: -2.5285165, y: 0.722, z: -1.3218956}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
@@ -133,7 +133,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7533814063228218806, guid: 1d14311c3453a6545a64ab4c04dfc536, type: 3}
 --- !u!54 &7723335693964544786
@@ -159,7 +159,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -343,8 +343,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.00065999996, y: -0.0005800003, z: 0.0010100007}
-  m_LocalScale: {x: 0.00064801925, y: 0.0006480191, z: 0.0006480191}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -0.0010577113, y: -0.001057711, z: -0.001057711}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2841123219538365737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5117,15 +5117,15 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
-  m_MinParticleSize: 0.4
-  m_MaxParticleSize: 1.42
+  m_MinParticleSize: 0.0007
+  m_MaxParticleSize: 2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 0
+  m_RenderAlignment: 1
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_EnableGPUInstancing: 1
