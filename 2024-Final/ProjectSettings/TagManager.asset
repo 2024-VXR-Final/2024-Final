@@ -18,6 +18,9 @@ TagManager:
   - ShowInsulin
   - PlaceInsulin
   - InsulinKey
+  - HeartCell
+  - BrainCell
+  - BloodCell
   layers:
   - Default
   - TransparentFX

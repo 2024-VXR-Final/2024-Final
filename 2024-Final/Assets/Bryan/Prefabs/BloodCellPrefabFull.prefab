@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3907743459242709476}
   m_Layer: 0
   m_Name: BloodCellPrefabFull
-  m_TagString: Untagged
+  m_TagString: BloodCell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +63,7 @@ MonoBehaviour:
   HappyCell: {fileID: 6076115335461955538}
   HappySound: {fileID: 7022892331381279031, guid: 8a0237a7bdd597242a5365f43e17feeb,
     type: 3}
+  isHappy: 0
 --- !u!33 &6961310956029856209
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -266,7 +267,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -5805,6 +5806,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: aa512fa097d893b4b98a45d6c5b70d9d, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 657d604527467784f933870a1c46f347,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
