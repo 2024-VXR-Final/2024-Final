@@ -75,8 +75,9 @@ public class CellAnimations : MonoBehaviour
         }
 
         isHappy = true;
-        collider.convex = true;
+        rigidbody.isKinematic = false;        
         rigidbody.useGravity = true;
-        rigidbody.isKinematic = false;
+        collider.convex = true;
+
     }
 }
