@@ -12,5 +12,7 @@ EditorBuildSettings:
     path: Assets/Nathaniel/Scenes/MainScene.unity
     guid: 384e61b8d5b4892449fb4461d4cb2e70
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d90ca03e12b2321469921264dc33c10e,
+      type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b9c00492cf8cbb44385fe8aaf3d7123c,
       type: 2}
