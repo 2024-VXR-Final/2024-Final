@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1113,6 +1113,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f19afb877167d32419f4a606dbf9dc67, type: 3}
+--- !u!1001 &5097507316682855975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 388.00253
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -157.52817
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724800018511700404, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105863722712595214, guid: 56881daa4bbde8f47b510d6049ead264,
+        type: 3}
+      propertyPath: m_Name
+      value: FiestSceneRoom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56881daa4bbde8f47b510d6049ead264, type: 3}
 --- !u!4 &6193841482910072657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5612940884492936084, guid: 39f8b9d9537bd5645882f003ceb1063b,
@@ -1250,3 +1318,4 @@ SceneRoots:
   - {fileID: 456508409}
   - {fileID: 4259190731626006346}
   - {fileID: 1588470595459390952}
+  - {fileID: 5097507316682855975}
