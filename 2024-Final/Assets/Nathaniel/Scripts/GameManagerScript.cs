@@ -55,7 +55,8 @@ public class GameManagerScript : MonoBehaviour
             if (label.gameObject.CompareTag("Score"))
             {
                 scoreLabel = label;
-            } else if (label.gameObject.CompareTag("Time"))
+            }
+            else if (label.gameObject.CompareTag("Time"))
             {
                 timeLabel = label;
             }
@@ -120,10 +121,10 @@ public class GameManagerScript : MonoBehaviour
                 StartCoroutine("CueMouth");
                 StartCoroutine("ChangeToGame");
                 break;
-            
+
             //By default the difficulty is set to easy
-            default: 
-                gameDifficulty = 0; 
+            default:
+                gameDifficulty = 0;
                 break;
         }
 
@@ -184,6 +185,6 @@ public class GameManagerScript : MonoBehaviour
     private IEnumerator ChangeToGame()
     {
         yield return new WaitForSeconds(21);
-        SceneManager.LoadScene("GamePlayScene");
+        SceneManager.LoadScene(1);
     }
 }

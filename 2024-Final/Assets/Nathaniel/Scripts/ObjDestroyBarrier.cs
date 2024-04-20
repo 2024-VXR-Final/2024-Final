@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,13 @@ using UnityEngine;
 public class ObjDestroyBarrier : MonoBehaviour
 {
     public Transform rigSpawn;
+
+    public static event Action RespawnRig;
+
+    private void Awake()
+    {
+        RespawnRig.Invoke();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
