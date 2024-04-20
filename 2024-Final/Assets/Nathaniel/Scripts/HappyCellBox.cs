@@ -31,13 +31,13 @@ public class HappyCellBox : MonoBehaviour
             if (cellIsHappy)
             {
                 objToDespawn.GetComponent<AudioSource>().PlayOneShot(clip);
-                DespawnTimer();
+                StartCoroutine(DespawnTimer());
             }
         }
     }
 
     //Play an animation, and despawn the object after 3 seconds
-    void DespawnTimer()
+    IEnumerator DespawnTimer()
     {
         //set transform so it moves with the animation
         objToDespawn.transform.SetParent(gameObject.transform);
@@ -48,7 +48,9 @@ public class HappyCellBox : MonoBehaviour
 
         //Play the animation before we destroy it
         animator.Play("Base Layer.ShrinkAndMove");
+
         //Destroy it after 3 seconds
-        Destroy(objToDespawn.gameObject, 3);
+        yield return new WaitForSeconds(3);
+        objToDespawn.gameObject.GetComponent<PooledCell>().ReleaseObject();
     }
 }

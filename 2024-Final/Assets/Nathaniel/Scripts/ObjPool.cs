@@ -12,6 +12,7 @@ public class ObjPool : MonoBehaviour
     [SerializeField] PooledObject objToSpawn;
     [SerializeField] int maxPoolSize = 5;
     public IObjectPool<PooledObject> pool;
+    public bool insulinButtonPressed;
 
     int spawnedObjects;
 
@@ -35,7 +36,6 @@ public class ObjPool : MonoBehaviour
                 }
             }
         }
-
 
         pool = new ObjectPool<PooledObject>(CreateObj, OnGet, OnRelease, OnDestroyObj, maxSize: maxPoolSize);
         StartCoroutine(SpawnOnTimer());
@@ -79,10 +79,14 @@ public class ObjPool : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
         }
+        else
+        {
+            insulinButtonPressed = true;
+        }
 
         while (true)
         {
-            if (spawnedObjects <= maxPoolSize)
+            if (spawnedObjects <= maxPoolSize && insulinButtonPressed)
             {
                 pool.Get();
             }

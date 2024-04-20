@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class PancreasButton : MonoBehaviour
     public AudioSource soundEffect;
     public GameObject particleSystemObject; // Changed from ParticleSystem to GameObject
     [SerializeField] GameObject pancreasParent;
+    [SerializeField] GameObject insulinPool;
     private bool buttonPressed = false;
 
     public void OnButtonPress()
@@ -32,6 +34,8 @@ public class PancreasButton : MonoBehaviour
             Invoke("ResetButtonPressed", 4f);
 
             StartCoroutine(DisablePancreasButton());
+
+            insulinPool.GetComponent<ObjPool>().insulinButtonPressed = true;
         }
     }
 

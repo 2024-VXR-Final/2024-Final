@@ -63,6 +63,7 @@ public class CellPool : MonoBehaviour
     {
         obj.gameObject.SetActive(false);
         spawnedObjects--;
+        obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
         //obj.GetComponent<Animator>().enabled = false;
     }
 
@@ -75,11 +76,6 @@ public class CellPool : MonoBehaviour
     //Spawns a new object every second
     public IEnumerator SpawnOnTimer()
     {
-        if (gameObject.CompareTag("InsulinKey"))
-        {
-            yield return new WaitForSeconds(0.5f);
-        }
-
         while (true)
         {
             if (spawnedObjects <= maxPoolSize)
