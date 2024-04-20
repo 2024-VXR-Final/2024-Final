@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kevin/Scene/Timeline Base Scene.unity
     guid: b5dadc83f64b30941b83e8cd1cb28b7b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Nathaniel/Scenes/GamePlayScene.unity
     guid: 78e62e4e9488b614e812bf911f7e1390
+  - enabled: 0
+    path: Assets/Nathaniel/Scenes/MainScene.unity
+    guid: 384e61b8d5b4892449fb4461d4cb2e70
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d90ca03e12b2321469921264dc33c10e,
       type: 2}
