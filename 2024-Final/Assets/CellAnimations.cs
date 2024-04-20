@@ -21,6 +21,16 @@ public class CellAnimations : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void OnEnable()
+    {
+        isHappy = false;
+    }
+
+    private void OnDisable()
+    {
+        CloseCell();
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -12,5 +12,13 @@ public class ObjDestroyBarrier : MonoBehaviour
         {
             other.gameObject.transform.position = rigSpawn.position;
         }
+
+        if (other.gameObject.tag.Contains("Cell"))
+        {
+            other.gameObject.GetComponent<PooledCell>().ReleaseObject();
+        }else if (other.gameObject.CompareTag("InsulinKey"))
+        {
+            other.gameObject.GetComponent<PooledObject>().ReleaseObject();
+        }
     }
 }

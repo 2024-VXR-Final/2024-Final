@@ -7,7 +7,7 @@ public class InsulinPlaceIndicator : MonoBehaviour
     [SerializeField] GameObject staticInsulinKey;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         staticInsulinKey.SetActive(false);
     }
