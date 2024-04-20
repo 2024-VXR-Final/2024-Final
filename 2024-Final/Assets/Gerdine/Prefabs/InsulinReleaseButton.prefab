@@ -257,8 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarAnimator: {fileID: 0}
-  buttonPressedParameter: ButtonPressed
-  waveAnimationParameter: Wave
+  soundEffect: {fileID: 0}
+  particleSystemObject: {fileID: 0}
 --- !u!1 &5440486084570574989
 GameObject:
   m_ObjectHideFlags: 0

@@ -4777,7 +4777,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4946,6 +4946,8 @@ MonoBehaviour:
   - {fileID: 7400000, guid: cbc9577323f47c14080b41e13f0fb256, type: 2}
   change: {fileID: 5518554126968449972}
   HappyCell: {fileID: 3605705425790773431}
+  HappySound: {fileID: 0}
+  isHappy: 0
 --- !u!33 &2041680411693904230
 MeshFilter:
   m_ObjectHideFlags: 0
