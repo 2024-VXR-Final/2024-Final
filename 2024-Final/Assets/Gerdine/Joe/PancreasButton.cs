@@ -8,6 +8,7 @@ public class PancreasButton : MonoBehaviour
     public Animator avatarAnimator;
     public AudioSource soundEffect;
     public GameObject particleSystemObject; // Changed from ParticleSystem to GameObject
+    [SerializeField] GameObject pancreasParent;
     private bool buttonPressed = false;
 
     public void OnButtonPress()
@@ -29,6 +30,8 @@ public class PancreasButton : MonoBehaviour
 
             // Invoke a method to reset the button press after a delay (e.g., 4 seconds)
             Invoke("ResetButtonPressed", 4f);
+
+            StartCoroutine(DisablePancreasButton());
         }
     }
 
@@ -54,6 +57,13 @@ public class PancreasButton : MonoBehaviour
 
         // Trigger the idle animation
         avatarAnimator.SetTrigger("Idle");
+    }
+
+    IEnumerator DisablePancreasButton()
+    {
+        yield return new WaitForSeconds(5);
+
+        pancreasParent.SetActive(false);
     }
 }
 
