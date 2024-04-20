@@ -184,6 +184,6 @@ public class GameManagerScript : MonoBehaviour
     private IEnumerator ChangeToGame()
     {
         yield return new WaitForSeconds(21);
-        SceneManager.LoadScene("GamePlayScene");
+        SceneManager.LoadScene("MainScene");
     }
 }
