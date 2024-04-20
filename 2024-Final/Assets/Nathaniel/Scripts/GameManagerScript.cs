@@ -11,6 +11,7 @@ public class GameManagerScript : MonoBehaviour
     //The two cams, one for player and one for the animations
     [SerializeField] GameObject ZoomByTimAllen;
 
+    [SerializeField] GameObject HideSky;
     //Fields for Joe and his animations
     [SerializeField] GameObject Mouth;
     [SerializeField] Animator JoeEating;
@@ -162,6 +163,7 @@ public class GameManagerScript : MonoBehaviour
                 NomNom();
                 yield return new WaitForSeconds(2);
                 MouthActive = true;
+                HideSky.SetActive(true);
                 Mouth.SetActive(true);
                 yield return new WaitForSeconds(5.35f);
                 Joe.SetActive(false);

@@ -275,14 +275,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355940481}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.21, y: -28.23, z: -0.35}
   m_LocalScale: {x: 40, y: 40, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 479421534}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &416684453 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 60220586167869399, guid: ed91c44d4a53afa4c9d9d090d4385ad1,
@@ -454,17 +454,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a7a2ed0e41ae9a5469a94fab420f8540,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.0000043257105
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7a2ed0e41ae9a5469a94fab420f8540,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 1.3119789e-14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7a2ed0e41ae9a5469a94fab420f8540,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -2.5444436e-14
       objectReference: {fileID: 0}
     - target: {fileID: -3887185075125053422, guid: a7a2ed0e41ae9a5469a94fab420f8540,
         type: 3}
@@ -540,7 +540,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 243d86f074612854f9c9810bb2f62239, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -572,7 +572,7 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609739187}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: bb7eafffc6cd3634a96bb8a54a762921, type: 2}
   m_InitialState: 1
@@ -588,8 +588,6 @@ PlayableDirector:
     value: {fileID: 1743650935}
   - key: {fileID: 0}
     value: {fileID: 479421536}
-  - key: {fileID: 2945004607807772102, guid: bb7eafffc6cd3634a96bb8a54a762921, type: 2}
-    value: {fileID: 1743650935}
   - key: {fileID: -2698722774319208200, guid: bb7eafffc6cd3634a96bb8a54a762921, type: 2}
     value: {fileID: 479421536}
   m_ExposedReferences:
@@ -742,6 +740,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256292844433420340, guid: 18c808d833af3a44891c70ba857d5868,
+        type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 177205385}
+    - target: {fileID: 1256292844433420340, guid: 18c808d833af3a44891c70ba857d5868,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 177205385}
+    - target: {fileID: 1256292844433420340, guid: 18c808d833af3a44891c70ba857d5868,
+        type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnHoverExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256292844433420340, guid: 18c808d833af3a44891c70ba857d5868,
+        type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HoverEvent
       objectReference: {fileID: 0}
     - target: {fileID: 1402644616893738717, guid: 18c808d833af3a44891c70ba857d5868,
         type: 3}
@@ -2122,7 +2140,7 @@ Transform:
   m_GameObject: {fileID: 1883328988}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.482, y: 15.733, z: -40.25}
+  m_LocalPosition: {x: 1.321, y: 15.733, z: -40.25}
   m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
