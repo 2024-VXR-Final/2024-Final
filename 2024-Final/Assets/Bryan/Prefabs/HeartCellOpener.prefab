@@ -4906,6 +4906,7 @@ GameObject:
   - component: {fileID: 4389723713494320725}
   - component: {fileID: 4900573481453242354}
   - component: {fileID: 3670286078787826710}
+  - component: {fileID: 9047525183773568867}
   m_Layer: 0
   m_Name: HeartCellOpener
   m_TagString: HeartCell
@@ -5376,6 +5377,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cde974cf2a0ade4b9c95c5872efe139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9047525183773568867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8719932708132395356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e76e6cd9c57d3498a89603f9f046b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadCellState: {fileID: 2874650915222977148}
+  happyCellState: {fileID: 7186174609472376159}
 --- !u!1001 &3109073736474609453
 PrefabInstance:
   m_ObjectHideFlags: 0

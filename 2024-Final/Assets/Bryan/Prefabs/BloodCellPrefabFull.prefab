@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1088634336299869785}
   - component: {fileID: 1337946546979937439}
   - component: {fileID: 5013058745920174897}
+  - component: {fileID: 1384001334415002397}
   m_Layer: 0
   m_Name: BloodCellPrefabFull
   m_TagString: BloodCell
@@ -490,6 +491,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cde974cf2a0ade4b9c95c5872efe139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1384001334415002397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178137357618653717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e76e6cd9c57d3498a89603f9f046b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadCellState: {fileID: 6481654010616477815}
+  happyCellState: {fileID: 6076115335461955538}
 --- !u!1 &2616295984163246503
 GameObject:
   m_ObjectHideFlags: 0

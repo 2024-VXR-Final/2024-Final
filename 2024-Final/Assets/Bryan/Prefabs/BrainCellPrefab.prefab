@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 1180709569187705572}
   - component: {fileID: 1332606792436588314}
   - component: {fileID: 2110690590017865584}
+  - component: {fileID: 4328696141337785465}
   m_Layer: 0
   m_Name: BrainCellPrefab
   m_TagString: BrainCell
@@ -490,6 +491,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cde974cf2a0ade4b9c95c5872efe139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4328696141337785465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275006524424229442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e76e6cd9c57d3498a89603f9f046b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadCellState: {fileID: 4603165504132059048}
+  happyCellState: {fileID: 9108611494507683914}
 --- !u!1 &3143272162512255465
 GameObject:
   m_ObjectHideFlags: 0
