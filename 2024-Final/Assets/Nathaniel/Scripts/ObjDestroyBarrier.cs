@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class ObjDestroyBarrier : MonoBehaviour
 {
-    
+    public Transform rigSpawn;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.transform.position = rigSpawn.position;
+        }
+    }
 }
