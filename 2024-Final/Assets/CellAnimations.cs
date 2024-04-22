@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class CellAnimations : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class CellAnimations : MonoBehaviour
     private void OnEnable()
     {
         isHappy = false;
+        gameObject.GetComponent<XRGrabInteractable>().enabled = true;
     }
 
     private void OnDisable()
