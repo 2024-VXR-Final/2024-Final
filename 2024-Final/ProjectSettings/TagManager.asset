@@ -3,25 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Glucose
-  - Cube
-  - Food
-  - Ray
-  - Spawn
-  - Destroy
-  - Easy
-  - Medium
-  - Hard
-  - Time
-  - Score
-  - ShowInsulin
-  - PlaceInsulin
-  - InsulinKey
-  - HeartCell
-  - BrainCell
-  - BloodCell
-  - levelExit
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -29,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - AboveRenderer
-  - Sphere
-  - ParticleDestroy
-  - Glucose
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -58,7 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: ParticleDestroy
-    uniqueID: 1735206809
     locked: 0

@@ -14,6 +14,9 @@ public class ObjPool : MonoBehaviour
     public IObjectPool<PooledObject> pool;
     public bool insulinButtonPressed;
 
+    int totalCount;
+    public int totalNum;
+
     int spawnedObjects;
 
 
@@ -70,7 +73,6 @@ public class ObjPool : MonoBehaviour
     private void OnDestroyObj(PooledObject obj)
     {
         Destroy(obj.gameObject);
-        spawnedObjects--;
     }
 
     //Spawns a new object every second

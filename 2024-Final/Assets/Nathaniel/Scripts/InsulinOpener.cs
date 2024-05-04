@@ -10,7 +10,7 @@ public class InsulinOpener : MonoBehaviour
 
     ///Stuff for replacing materials
     [SerializeField] Material placementMat;
-    MeshRenderer keyRenderer;
+    MeshRenderer renderer;
     List<Material> keyMaterials = new List<Material>();
 
     //Stuff for checking if the thing is grabbed
@@ -20,8 +20,8 @@ public class InsulinOpener : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        keyRenderer = GetComponent<MeshRenderer>();
-        keyRenderer.GetMaterials(keyMaterials);
+        renderer = GetComponent<MeshRenderer>();
+        renderer.GetMaterials(keyMaterials);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,7 +44,7 @@ public class InsulinOpener : MonoBehaviour
             //If the key is released while in the trigger, destroy it and change the material so it looks like it snapped
             if (!grabScript.grabbed && other.CompareTag("InsulinKey"))
             {
-                other.gameObject.GetComponent<PooledObject>().ReleaseObject();
+                Destroy(other.gameObject);
                 ChangeMaterial();
                 openCell.Invoke();
             }
@@ -58,6 +58,6 @@ public class InsulinOpener : MonoBehaviour
     void ChangeMaterial()
     {
         keyMaterials[0] = placementMat;
-        keyRenderer.SetMaterials(keyMaterials);
+        renderer.SetMaterials(keyMaterials);
     }
 }
