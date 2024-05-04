@@ -7,7 +7,6 @@ public class Float : MonoBehaviour
     Vector3 minHeight = new Vector3();
     Vector3 maxHeight = new Vector3();
     Vector3 offset = new Vector3(0, 2f, 0);
-    float buffer = 0.7f;
 
     float forceScale;
     float scaleLerp;
